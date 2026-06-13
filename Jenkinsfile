@@ -37,7 +37,7 @@ pipeline {
         stage('Test Access') {
             steps {
                 sh 'sleep 2' // laisser le temps à Nginx de démarrer
-                sh 'curl --fail http://172.18.0.1:8081'
+                sh 'curl --fail http://172.17.0.1:8081'
             }
         }
     }
