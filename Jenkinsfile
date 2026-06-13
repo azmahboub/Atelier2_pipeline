@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout') {
             steps {
                 git branch: 'main',
