@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    tools {
+        // Charge l'outil configuré à l'étape précédente
+        docker 'docker-cli' 
+    }
     stages {
         stage('Checkout') {
             steps {
